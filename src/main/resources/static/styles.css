@@ -3,7 +3,8 @@
 body {
     background: url("hotel.jpg");
       background-repeat: no-repeat;
-  	background-size: 1000px auto;
+  	background-size: 100%;
+  	width: 100%;
   	font-size: 20px;
 }
 body:before {
@@ -33,4 +34,5 @@ a {
 
 .btn {
 	margin: 5px;
+	background-color: white;
 }

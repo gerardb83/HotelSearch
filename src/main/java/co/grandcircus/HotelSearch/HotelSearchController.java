@@ -43,10 +43,19 @@ public class HotelSearchController {
 			}
 		}
 		cityHotels.removeAll(toRemove);
-		System.out.println(cityHotels);
 		ModelAndView mv = new ModelAndView("selection");
 		mv.addObject("hotels", cityHotels);
 		mv.addObject("city", cityName);
+		return mv;
+	}
+	
+	@RequestMapping("/detail")
+	public ModelAndView detail(
+			@RequestParam("name") Long hotelId) {
+		ModelAndView mv = new ModelAndView("detail");	
+		Hotel hotel = dao.getOne(hotelId);
+		System.out.println(hotel);
+		mv.addObject("hotel", hotel);
 		return mv;
 	}
 }

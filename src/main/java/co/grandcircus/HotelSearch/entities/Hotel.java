@@ -19,18 +19,22 @@ public class Hotel {
 	private String city;
 	private Integer pricePerNight;
 	private Double rating;
+	private String map;
 	
 	public Hotel() {
 		super();
 	}
 
-	public Hotel(Long id, String name, String city, Integer pricePerNight, Double rating) {
+
+
+	public Hotel(Long id, String name, String city, Integer pricePerNight, Double rating, String map) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.city = city;
 		this.pricePerNight = pricePerNight;
 		this.rating = rating;
+		this.map = map;
 	}
 
 	public Long getId() {
@@ -73,12 +77,18 @@ public class Hotel {
 		this.rating = rating;
 	}
 
+	public String getMap() {
+		return map;
+	}
+
+	public void setMap(String map) {
+		this.map = map;
+	}
+
 	@Override
 	public String toString() {
 		return "Hotel [id=" + id + ", name=" + name + ", city=" + city + ", pricePerNight=" + pricePerNight
 				+ ", rating=" + rating + "]";
-	}
-
-	
+	}	
 	
 }

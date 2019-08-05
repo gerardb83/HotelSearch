@@ -12,7 +12,7 @@
 <body>
 <div class="container">
 
-		<h1>Hotels in ${city} </h1>
+		<h1>${hotel.name } </h1>
 		<table class="table">
 			<thead>
 				<tr>
@@ -20,17 +20,18 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach var="hotels" items="${hotels}">
 				<tr>
-					<td>${hotels.rating}</td>
-					<td><a href="/detail?name=${hotels.id}">${hotels.name}</a></td>
-					<td>$${hotels.pricePerNight}</td>
+					<td>${hotel.rating}</td>
+					<td>${hotel.name}</td>
+					<td>$${hotel.pricePerNight}</td>
 					
 				</tr>
-				</c:forEach>
 			</tbody>
 		</table>
-		<a class="btn primary" href="/">Back to Home</button>
+
+		
+		<iframe src="https://www.google.com/maps/embed?${hotel.map } width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<a class="btn primary" href="/">Back to Home</a>
 	</div>
 	
 </body>

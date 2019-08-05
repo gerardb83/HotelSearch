@@ -10,6 +10,8 @@ public interface HotelSearchDao extends JpaRepository<Hotel, Long>{
 
 	List<Hotel> findAllByCityOrderByPricePerNight(String city);
 	
+	Hotel getOne(Long id);
+	
 	
 	
 
